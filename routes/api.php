@@ -40,7 +40,7 @@ Route::post('/cursos/matricular',[CursoController::class,'matricularAlumno']);
 Route::get('/docentes',[DocenteController::class,'index']);
 Route::get('/docentes/{id}',[DocenteController::class,'show']);
 Route::post('/docentes',[DocenteController::class,'store']);
-Route::put('docentes/{id}',[DocenteController::class,'update']);
+Route::put('docentes/{id}',[DocenteController::class,'update']); 
 Route::delete('/docentes/{id}',[DocenteController::class,'destroy']);
 
 Route::get('/alumnoClase/showAllAlumnoOfCurso',[AlumnosClaseController::class,'showAllAlumnoOfCurso']);
