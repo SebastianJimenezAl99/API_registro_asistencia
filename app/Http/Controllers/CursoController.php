@@ -85,7 +85,8 @@ class CursoController extends Controller
         $data = [
             'id_curso' => $request->id_curso,
             'id_alumno' => $request->id_alumno,
-            'fecha' => $request->fecha
+            'fecha' => $request->fecha,
+            'estado' => $request->estado
         ];
         return AsistenciaController::store($data);
     }
