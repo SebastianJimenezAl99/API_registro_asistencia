@@ -81,9 +81,9 @@ class CursoController extends Controller
         return AlumnosClaseController::store($data);
     }
 
-    public function registrarAsistencia(Request $request,$id){
+    public function registrarAsistencia(Request $request){
         $data = [
-            'id_curso' => $id,
+            'id_curso' => $request->id_curso,
             'id_alumno' => $request->id_alumno,
             'fecha' => $request->fecha
         ];

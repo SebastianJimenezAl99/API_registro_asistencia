@@ -36,7 +36,7 @@ Route::post('/cursos',[CursoController::class,'store']);
 Route::put('/cursos/{id}',[CursoController::class,'update']);
 Route::delete('/cursos/{id}',[CursoController::class,'destroy']);
 Route::post('/cursos/matricular',[CursoController::class,'matricularAlumno']);
-Route::get('/cursos/asistencias/{id}',[CursoController::class,'registrarAsistencia']);
+Route::post('/cursos/registrar-asistencias',[CursoController::class,'registrarAsistencia']);
 
 Route::get('/docentes',[DocenteController::class,'index']);
 Route::get('/docentes/{id}',[DocenteController::class,'show']);
