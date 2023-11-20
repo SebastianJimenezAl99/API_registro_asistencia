@@ -12,23 +12,7 @@ use PhpParser\Node\Stmt\Return_;
 
 class AsistenciaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    
     public static function store($data)
     {
         $id_alumno =  $data['id_alumno'];
@@ -73,42 +57,7 @@ class AsistenciaController extends Controller
         } else {
             return 'Opciones de asistencia: Asistió temprano (A), Asistió tarde (T), Faltó (F)';
         }
-        
-
-        
+         
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Asistencia $asistencia)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Asistencia $asistencia)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Asistencia $asistencia)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy($id)
-    {
-        $datos = Asistencia::select('id_curso', 'id_alumno')->where('id', '=', $id)->get();
-
-        Asistencia::deleted($id);
-    }
 }
